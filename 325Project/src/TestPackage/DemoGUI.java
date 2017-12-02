@@ -16,7 +16,6 @@ public class DemoGUI extends javax.swing.JFrame {
      */
     public DemoGUI() {
         initComponents();
-        pos1.setSelected(true);
     }
 
     /**
@@ -59,16 +58,16 @@ public class DemoGUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        newGame = new javax.swing.JMenuItem();
+        login = new javax.swing.JMenuItem();
+        save = new javax.swing.JMenuItem();
+        exit = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        summon1 = new javax.swing.JMenuItem();
+        summon2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        howTo = new javax.swing.JMenuItem();
+        about = new javax.swing.JMenuItem();
 
         jRadioButton16.setText("jRadioButton16");
 
@@ -133,37 +132,47 @@ public class DemoGUI extends javax.swing.JFrame {
 
         jMenu1.setText("File");
 
-        jMenuItem1.setText("New Game");
-        jMenu1.add(jMenuItem1);
+        newGame.setText("New Game");
+        newGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newGameActionPerformed(evt);
+            }
+        });
+        jMenu1.add(newGame);
 
-        jMenuItem2.setText("Login");
-        jMenu1.add(jMenuItem2);
+        login.setText("Login");
+        jMenu1.add(login);
 
-        jMenuItem3.setText("Save");
-        jMenu1.add(jMenuItem3);
+        save.setText("Save");
+        jMenu1.add(save);
 
-        jMenuItem4.setText("Exit");
-        jMenu1.add(jMenuItem4);
+        exit.setText("Exit");
+        jMenu1.add(exit);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu3.setText("Summon Enemy");
+        jMenu3.setText("Summon");
 
-        jMenuItem7.setText("Enemy 1");
-        jMenu3.add(jMenuItem7);
+        summon1.setText("Enemy 1");
+        summon1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                summon1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(summon1);
 
-        jMenuItem8.setText("Enemy 2");
-        jMenu3.add(jMenuItem8);
+        summon2.setText("Enemy 2");
+        jMenu3.add(summon2);
 
         jMenuBar1.add(jMenu3);
 
         jMenu2.setText("Info");
 
-        jMenuItem5.setText("How to Play");
-        jMenu2.add(jMenuItem5);
+        howTo.setText("How to Play");
+        jMenu2.add(howTo);
 
-        jMenuItem6.setText("About");
-        jMenu2.add(jMenuItem6);
+        about.setText("About");
+        jMenu2.add(about);
 
         jMenuBar1.add(jMenu2);
 
@@ -675,6 +684,36 @@ public class DemoGUI extends javax.swing.JFrame {
         //Class based special move
     }//GEN-LAST:event_btnSpecialActionPerformed
 
+    private void newGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameActionPerformed
+        // TODO add your handling code here:
+        pos1.setSelected(true);
+        pos2.setSelected(false);
+        pos3.setSelected(false);
+        pos4.setSelected(false);
+        pos5.setSelected(false);
+        pos6.setSelected(false);
+        pos7.setSelected(false);
+        pos8.setSelected(false);
+        pos9.setSelected(false);
+        pos10.setSelected(false);
+        pos11.setSelected(false);
+        pos12.setSelected(false);
+        pos13.setSelected(false);
+        pos14.setSelected(false);
+        pos15.setSelected(false);
+        
+        txtSelf.setText("");
+        txtEnemy.setText("");
+        txtAction.setText("");
+        
+        
+    }//GEN-LAST:event_newGameActionPerformed
+
+    private void summon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon1ActionPerformed
+        // TODO add your handling code here:
+        pos15.setSelected(true);
+    }//GEN-LAST:event_summon1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -712,10 +751,13 @@ public class DemoGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem about;
     private javax.swing.JButton btnAttack;
     private javax.swing.JButton btnDefend;
     private javax.swing.JButton btnMove;
     private javax.swing.JButton btnSpecial;
+    private javax.swing.JMenuItem exit;
+    private javax.swing.JMenuItem howTo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -723,18 +765,12 @@ public class DemoGUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JRadioButton jRadioButton16;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JMenuItem login;
+    private javax.swing.JMenuItem newGame;
     private javax.swing.JRadioButton pos1;
     private javax.swing.JRadioButton pos10;
     private javax.swing.JRadioButton pos11;
@@ -750,6 +786,9 @@ public class DemoGUI extends javax.swing.JFrame {
     private javax.swing.JRadioButton pos7;
     private javax.swing.JRadioButton pos8;
     private javax.swing.JRadioButton pos9;
+    private javax.swing.JMenuItem save;
+    private javax.swing.JMenuItem summon1;
+    private javax.swing.JMenuItem summon2;
     private javax.swing.JTextArea txtAction;
     private javax.swing.JTextArea txtEnemy;
     private javax.swing.JTextArea txtSelf;
