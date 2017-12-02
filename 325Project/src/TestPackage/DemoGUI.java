@@ -301,380 +301,99 @@ public class DemoGUI extends javax.swing.JFrame {
 
     private void btnMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoveActionPerformed
         // TODO add your handling code here:
-        if (pos1.isSelected())
-        {
-            if (!pos2.isSelected())
-            {
-                pos1.setSelected(false);
-                pos2.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos2.isSelected())
-        {
-            if (!pos3.isSelected())
-            {
-                pos2.setSelected(false);
-                pos3.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos3.isSelected())
-        {
-            if (!pos4.isSelected())
-            {
-                pos3.setSelected(false);
-                pos4.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos4.isSelected())
-        {
-            if (!pos5.isSelected())
-            {
-                pos4.setSelected(false);
-                pos5.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos5.isSelected())
-        {
-            if (!pos6.isSelected())
-            {
-                pos5.setSelected(false);
-                pos6.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos6.isSelected())
-        {
-            if (!pos7.isSelected())
-            {
-                pos6.setSelected(false);
-                pos7.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos7.isSelected())
-        {
-            if (!pos8.isSelected())
-            {
-                pos7.setSelected(false);
-                pos8.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos8.isSelected())
-        {
-            if (!pos9.isSelected())
-            {
-                pos8.setSelected(false);
-                pos9.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos9.isSelected())
-        {
-            if (!pos10.isSelected())
-            {
-                pos9.setSelected(false);
-                pos10.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos10.isSelected())
-        {
-            if (!pos11.isSelected())
-            {
-                pos10.setSelected(false);
-                pos11.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos11.isSelected())
-        {
-            if (!pos12.isSelected())
-            {
-                pos11.setSelected(false);
-                pos12.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos12.isSelected())
-        {
-            if (!pos13.isSelected())
-            {
-                pos12.setSelected(false);
-                pos13.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else if (pos13.isSelected())
-        {
-            if (!pos14.isSelected())
-            {
-                pos13.setSelected(false);
-                pos14.setSelected(true);
-            }
-            
-            else
-            {
-                txtAction.append("The enemy is in the way. \n");
-            }
-        }
-        
-        else
-        {
-            txtAction.append("Can not move. \n");
-        }
+        //Player movement
+        playerMovement();
+        enemyReaction();
+
     }//GEN-LAST:event_btnMoveActionPerformed
 
     private void btnAttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttackActionPerformed
         // TODO add your handling code here:
-        if (pos1.isSelected())
-        {
-            if (pos2.isSelected())
-            {
+        if (pos1.isSelected()) {
+            if (pos2.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos2.isSelected())
-        {
-            if (pos3.isSelected())
-            {
+        } else if (pos2.isSelected()) {
+            if (pos3.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos3.isSelected())
-        {
-            if (pos4.isSelected())
-            {
+        } else if (pos3.isSelected()) {
+            if (pos4.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos4.isSelected())
-        {
-            if (pos5.isSelected())
-            {
+        } else if (pos4.isSelected()) {
+            if (pos5.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos5.isSelected())
-        {
-            if (pos6.isSelected())
-            {
+        } else if (pos5.isSelected()) {
+            if (pos6.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos6.isSelected())
-        {
-            if (pos7.isSelected())
-            {
+        } else if (pos6.isSelected()) {
+            if (pos7.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos7.isSelected())
-        {
-            if (pos8.isSelected())
-            {
+        } else if (pos7.isSelected()) {
+            if (pos8.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos8.isSelected())
-        {
-            if (pos9.isSelected())
-            {
+        } else if (pos8.isSelected()) {
+            if (pos9.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos9.isSelected())
-        {
-            if (pos10.isSelected())
-            {
+        } else if (pos9.isSelected()) {
+            if (pos10.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos10.isSelected())
-        {
-            if (pos11.isSelected())
-            {
+        } else if (pos10.isSelected()) {
+            if (pos11.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos11.isSelected())
-        {
-            if (pos12.isSelected())
-            {
+        } else if (pos11.isSelected()) {
+            if (pos12.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos12.isSelected())
-        {
-            if (pos12.isSelected())
-            {
+        } else if (pos12.isSelected()) {
+            if (pos12.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos13.isSelected())
-        {
-            if (pos14.isSelected())
-            {
+        } else if (pos13.isSelected()) {
+            if (pos14.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else if (pos14.isSelected())
-        {
-            if (pos15.isSelected())
-            {
+        } else if (pos14.isSelected()) {
+            if (pos15.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
-            }
-            
-            else
-            {
+            } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
-        }
-        
-        else
-        {
+        } else {
             txtAction.append("Can not move. \n");
         }
     }//GEN-LAST:event_btnAttackActionPerformed
@@ -701,12 +420,12 @@ public class DemoGUI extends javax.swing.JFrame {
         pos13.setSelected(false);
         pos14.setSelected(false);
         pos15.setSelected(false);
-        
+
         txtSelf.setText("");
         txtEnemy.setText("");
         txtAction.setText("");
-        
-        
+
+
     }//GEN-LAST:event_newGameActionPerformed
 
     private void summon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon1ActionPerformed
@@ -793,4 +512,214 @@ public class DemoGUI extends javax.swing.JFrame {
     private javax.swing.JTextArea txtEnemy;
     private javax.swing.JTextArea txtSelf;
     // End of variables declaration//GEN-END:variables
+
+    private void playerMovement() {
+        if (pos1.isSelected()) {
+            if (!pos2.isSelected()) {
+                pos1.setSelected(false);
+                pos2.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos2.isSelected()) {
+            if (!pos3.isSelected()) {
+                pos2.setSelected(false);
+                pos3.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos3.isSelected()) {
+            if (!pos4.isSelected()) {
+                pos3.setSelected(false);
+                pos4.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos4.isSelected()) {
+            if (!pos5.isSelected()) {
+                pos4.setSelected(false);
+                pos5.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos5.isSelected()) {
+            if (!pos6.isSelected()) {
+                pos5.setSelected(false);
+                pos6.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos6.isSelected()) {
+            if (!pos7.isSelected()) {
+                pos6.setSelected(false);
+                pos7.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos7.isSelected()) {
+            if (!pos8.isSelected()) {
+                pos7.setSelected(false);
+                pos8.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos8.isSelected()) {
+            if (!pos9.isSelected()) {
+                pos8.setSelected(false);
+                pos9.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos9.isSelected()) {
+            if (!pos10.isSelected()) {
+                pos9.setSelected(false);
+                pos10.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos10.isSelected()) {
+            if (!pos11.isSelected()) {
+                pos10.setSelected(false);
+                pos11.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos11.isSelected()) {
+            if (!pos12.isSelected()) {
+                pos11.setSelected(false);
+                pos12.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos12.isSelected()) {
+            if (!pos13.isSelected()) {
+                pos12.setSelected(false);
+                pos13.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else if (pos13.isSelected()) {
+            if (!pos14.isSelected()) {
+                pos13.setSelected(false);
+                pos14.setSelected(true);
+            } else {
+                txtAction.append("The enemy is in the way. \n");
+            }
+        } else {
+            txtAction.append("Can not move. \n");
+        }
+
+    }
+
+    private void enemyReaction() {
+        if (pos15.isSelected()) {
+            if (!pos14.isSelected()) {
+                pos15.setSelected(false);
+                pos14.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+
+            }
+        } else if (pos14.isSelected()) {
+            if (!pos13.isSelected()) {
+                pos14.setSelected(false);
+                pos13.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos13.isSelected()) {
+            if (!pos12.isSelected()) {
+                pos14.setSelected(false);
+                pos13.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos12.isSelected()) {
+            if (!pos11.isSelected()) {
+                pos12.setSelected(false);
+                pos11.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos11.isSelected()) {
+            if (!pos10.isSelected()) {
+                pos11.setSelected(false);
+                pos10.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos10.isSelected()) {
+            if (!pos9.isSelected()) {
+                pos10.setSelected(false);
+                pos9.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos9.isSelected()) {
+            if (!pos8.isSelected()) {
+                pos9.setSelected(false);
+                pos8.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos8.isSelected()) {
+            if (!pos7.isSelected()) {
+                pos8.setSelected(false);
+                pos7.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos7.isSelected()) {
+            if (!pos6.isSelected()) {
+                pos7.setSelected(false);
+                pos6.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos6.isSelected()) {
+            if (!pos5.isSelected()) {
+                pos6.setSelected(false);
+                pos5.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos5.isSelected()) {
+            if (!pos4.isSelected()) {
+                pos5.setSelected(false);
+                pos4.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos4.isSelected()) {
+            if (!pos3.isSelected()) {
+                pos4.setSelected(false);
+                pos3.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else if (pos3.isSelected()) {
+            if (!pos2.isSelected()) {
+                pos3.setSelected(false);
+                pos2.setSelected(true);
+                txtAction.append("You see the enemy move forward. \n");
+            } else {
+                txtAction.append("You have been attacked. \n");
+            }
+        } else {
+
+        }
+
+    }
 }
