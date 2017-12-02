@@ -631,8 +631,8 @@ public class DemoGUI extends javax.swing.JFrame {
             }
         } else if (pos13.isSelected()) {
             if (!pos12.isSelected()) {
-                pos14.setSelected(false);
-                pos13.setSelected(true);
+                pos13.setSelected(false);
+                pos12.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
                 txtAction.append("You have been attacked. \n");
