@@ -63,6 +63,9 @@ public class GUI extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -87,6 +90,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         btnAttack.setText("Attack");
+        btnAttack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAttackActionPerformed(evt);
+            }
+        });
 
         btnSpecial.setText("Special");
 
@@ -133,6 +141,16 @@ public class GUI extends javax.swing.JFrame {
         jMenu1.add(jMenuItem4);
 
         jMenuBar1.add(jMenu1);
+
+        jMenu3.setText("Summon Enemy");
+
+        jMenuItem7.setText("Enemy 1");
+        jMenu3.add(jMenuItem7);
+
+        jMenuItem8.setText("Enemy 2");
+        jMenu3.add(jMenuItem8);
+
+        jMenuBar1.add(jMenu3);
 
         jMenu2.setText("Info");
 
@@ -268,6 +286,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnDefendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDefendActionPerformed
         // TODO add your handling code here:
+        //will either reduce or negate damage dependant on class
     }//GEN-LAST:event_btnDefendActionPerformed
 
     private void btnMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoveActionPerformed
@@ -460,6 +479,196 @@ public class GUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnMoveActionPerformed
 
+    private void btnAttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttackActionPerformed
+        // TODO add your handling code here:
+        if (pos1.isSelected())
+        {
+            if (pos2.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos2.isSelected())
+        {
+            if (pos3.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos3.isSelected())
+        {
+            if (pos4.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos4.isSelected())
+        {
+            if (pos5.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos5.isSelected())
+        {
+            if (pos6.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos6.isSelected())
+        {
+            if (pos7.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos7.isSelected())
+        {
+            if (pos8.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos8.isSelected())
+        {
+            if (pos9.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos9.isSelected())
+        {
+            if (pos10.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos10.isSelected())
+        {
+            if (pos11.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos11.isSelected())
+        {
+            if (pos12.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos12.isSelected())
+        {
+            if (pos12.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos13.isSelected())
+        {
+            if (pos14.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else if (pos14.isSelected())
+        {
+            if (pos15.isSelected())
+            {
+                txtAction.append("You attacked the enemy. \n");
+            }
+            
+            else
+            {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        }
+        
+        else
+        {
+            txtAction.append("Can not move. \n");
+        }
+    }//GEN-LAST:event_btnAttackActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -505,6 +714,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -512,6 +722,8 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JRadioButton jRadioButton16;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
