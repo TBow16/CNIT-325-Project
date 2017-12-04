@@ -298,6 +298,7 @@ public class DemoGUI extends javax.swing.JFrame {
     private void btnDefendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDefendActionPerformed
         // TODO add your handling code here:
         //will either reduce or negate damage dependant on class
+        enemyReaction();
     }//GEN-LAST:event_btnDefendActionPerformed
 
     private void btnMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoveActionPerformed
