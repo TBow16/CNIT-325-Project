@@ -17,6 +17,7 @@ public class DemoGUI extends javax.swing.JFrame {
     public DemoGUI() {
         initComponents();
     }
+    Integer playerHP = 100;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -309,93 +310,8 @@ public class DemoGUI extends javax.swing.JFrame {
 
     private void btnAttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttackActionPerformed
         // TODO add your handling code here:
-        if (pos1.isSelected()) {
-            if (pos2.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos2.isSelected()) {
-            if (pos3.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos3.isSelected()) {
-            if (pos4.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos4.isSelected()) {
-            if (pos5.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos5.isSelected()) {
-            if (pos6.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos6.isSelected()) {
-            if (pos7.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos7.isSelected()) {
-            if (pos8.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos8.isSelected()) {
-            if (pos9.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos9.isSelected()) {
-            if (pos10.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos10.isSelected()) {
-            if (pos11.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos11.isSelected()) {
-            if (pos12.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos12.isSelected()) {
-            if (pos12.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos13.isSelected()) {
-            if (pos14.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else if (pos14.isSelected()) {
-            if (pos15.isSelected()) {
-                txtAction.append("You attacked the enemy. \n");
-            } else {
-                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
-            }
-        } else {
-            txtAction.append("Can not move. \n");
-        }
+        playerAttack();
+        enemyReaction();
     }//GEN-LAST:event_btnAttackActionPerformed
 
     private void btnSpecialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSpecialActionPerformed
@@ -424,13 +340,17 @@ public class DemoGUI extends javax.swing.JFrame {
         txtSelf.setText("");
         txtEnemy.setText("");
         txtAction.setText("");
-
+        
+        txtAction.append("Welecome to Traning Simulator \n");
+        txtSelf.append("Class: Warrior \nHP: " + playerHP + "/100 \nAttack Damage: 25 \nDefense: 10 \n");
 
     }//GEN-LAST:event_newGameActionPerformed
 
     private void summon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon1ActionPerformed
         // TODO add your handling code here:
         pos15.setSelected(true);
+        txtEnemy.append("Murloc \nHP: 50/50 \nAttack Damage: 10 \nDefense: 10 \n");
+        txtAction.append("An enemy Murloc has appeared.");
     }//GEN-LAST:event_summon1ActionPerformed
 
     /**
@@ -721,5 +641,96 @@ public class DemoGUI extends javax.swing.JFrame {
 
         }
 
+    }
+    
+    private void playerAttack()
+    {
+        if (pos1.isSelected()) {
+            if (pos2.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos2.isSelected()) {
+            if (pos3.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos3.isSelected()) {
+            if (pos4.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos4.isSelected()) {
+            if (pos5.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos5.isSelected()) {
+            if (pos6.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos6.isSelected()) {
+            if (pos7.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos7.isSelected()) {
+            if (pos8.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos8.isSelected()) {
+            if (pos9.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos9.isSelected()) {
+            if (pos10.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos10.isSelected()) {
+            if (pos11.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos11.isSelected()) {
+            if (pos12.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos12.isSelected()) {
+            if (pos12.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos13.isSelected()) {
+            if (pos14.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else if (pos14.isSelected()) {
+            if (pos15.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
+            }
+        } else {
+            txtAction.append("Can not move. \n");
+        }
     }
 }
