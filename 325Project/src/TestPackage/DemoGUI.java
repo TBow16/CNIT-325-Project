@@ -342,14 +342,14 @@ public class DemoGUI extends javax.swing.JFrame {
         txtAction.setText("");
         
         txtAction.append("Welecome to Traning Simulator \n");
-        txtSelf.append("Class: Warrior \nHP: " + playerHP + "/100 \nAttack Damage: 25 \nDefense: 10 \n");
+        txtSelf.setText("Class: Warrior \nHP: " + playerHP + "/100 \nAttack Damage: 25 \nDefense: 10 \n");
 
     }//GEN-LAST:event_newGameActionPerformed
 
     private void summon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon1ActionPerformed
         // TODO add your handling code here:
         pos15.setSelected(true);
-        txtEnemy.append("Murloc \nHP: 50/50 \nAttack Damage: 10 \nDefense: 10 \n");
+        txtEnemy.setText("Murloc \nHP: 50/50 \nAttack Damage: 10 \nDefense: 10 \n");
         txtAction.append("An enemy Murloc has appeared.");
     }//GEN-LAST:event_summon1ActionPerformed
 
