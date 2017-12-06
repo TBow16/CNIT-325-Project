@@ -16,8 +16,23 @@ public class DemoGUI extends javax.swing.JFrame {
      */
     public DemoGUI() {
         initComponents();
+        
     }
+    //Player Stat holders
     Integer playerHP = 100;
+    Integer playerMax = 100;
+    Integer playerAtt = 25;
+    Integer playerDef = 25;
+    String playerClass = "Warrior";
+    Boolean playerStatus; 
+    
+    //Enemy stat holders
+    Integer enemyHP = 50;
+    Integer enemyMax = 50;
+    Integer enemyAtt = 15;
+    Integer enemyDef = 10;
+    String enemyClass = "Murloc";
+    Boolean enemyStatus;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -343,14 +358,14 @@ public class DemoGUI extends javax.swing.JFrame {
         txtAction.setText("");
         
         txtAction.append("Welecome to Traning Simulator \n");
-        txtSelf.setText("Class: Warrior \nHP: " + playerHP + "/100 \nAttack Damage: 25 \nDefense: 10 \n");
+        txtSelf.setText("Class: " + playerClass + "\nHP: " + playerHP + "/" + playerMax + "\nAttack Damage: " + playerAtt + "\nDefense: " + playerDef + "\n");
 
     }//GEN-LAST:event_newGameActionPerformed
 
     private void summon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon1ActionPerformed
         // TODO add your handling code here:
         pos15.setSelected(true);
-        txtEnemy.setText("Murloc \nHP: 50/50 \nAttack Damage: 10 \nDefense: 10 \n");
+        txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
         txtAction.append("An enemy Murloc has appeared.");
     }//GEN-LAST:event_summon1ActionPerformed
 
