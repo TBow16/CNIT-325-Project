@@ -9,7 +9,7 @@ package TestPackage;
  *
  * @author trevor
  */
-public class Melee extends Damage {
+public class Melee extends Damage implements Special {
 
     Melee(String x) {
         playerName = x;
@@ -17,6 +17,11 @@ public class Melee extends Damage {
         playerAtt = 25;
         playerDef = 20;
         playerRange = 1;
+    }
+
+    @Override
+    public void Extra() {
+
     }
 
 }

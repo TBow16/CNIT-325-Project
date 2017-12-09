@@ -9,7 +9,7 @@ package TestPackage;
  *
  * @author trevor
  */
-public class Range extends Damage {
+public class Range extends Damage implements Special {
 
     Range(String x) {
         playerName = x;
@@ -17,6 +17,11 @@ public class Range extends Damage {
         playerAtt = 25;
         playerDef = 15;
         playerRange = 2;
+    }
+
+    @Override
+    public void Extra() {
+
     }
 
 }

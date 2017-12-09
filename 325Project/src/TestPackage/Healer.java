@@ -9,7 +9,7 @@ package TestPackage;
  *
  * @author trevor
  */
-public class Healer extends Player {
+public class Healer extends Player implements Special {
 
     Healer(String x) {
         playerName = x;
@@ -17,5 +17,10 @@ public class Healer extends Player {
         playerAtt = 15;
         playerDef = 15;
         playerRange = 2;
+    }
+
+    @Override
+    public void Extra() {
+
     }
 }

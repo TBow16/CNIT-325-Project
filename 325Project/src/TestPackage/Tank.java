@@ -9,7 +9,7 @@ package TestPackage;
  *
  * @author trevor
  */
-public class Tank extends Player {
+public class Tank extends Player implements Special {
 
     Tank(String x) {
         playerName = x;
@@ -17,6 +17,11 @@ public class Tank extends Player {
         playerAtt = 15;
         playerDef = 25;
         playerRange = 1;
+    }
+
+    @Override
+    public void Extra() {
+
     }
 
 }
