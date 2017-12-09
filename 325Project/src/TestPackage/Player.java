@@ -10,78 +10,55 @@ package TestPackage;
  * @author trevor
  */
 public class Player {
-    
+
     String playerName;
-    Integer playerHP;
     Integer playerMax;
     Integer playerAtt;
     Integer playerDef;
     Integer playerRange;
-    
-    Player()
-    {
-        
+
+    Player() {
+
     }
-    
-    public String getName()
-    {
+
+    public String getName() {
         return this.playerName;
     }
-    
-    public Integer getHP()
-    {
-        return this.playerHP;
-    }
-    
-    public Integer getMax()
-    {
+
+    public Integer getMax() {
         return this.playerMax;
     }
-    
-    public Integer getAtt()
-    {
+
+    public Integer getAtt() {
         return this.playerAtt;
     }
-    
-    public Integer getDef()
-    {
+
+    public Integer getDef() {
         return this.playerDef;
     }
-    
-    public Integer getRange()
-    {
+
+    public Integer getRange() {
         return this.playerRange;
     }
-    
-    public void setName(String x)
-    {
+
+    public void setName(String x) {
         this.playerName = x;
     }
-    
-    public void setHP(Integer x)
-    {
-        this.playerHP = x;
-    }
-    
-    public void setMax(Integer x)
-    {
+
+    public void setMax(Integer x) {
         this.playerMax = x;
     }
-    
-    public void setAtt(Integer x)
-    {
+
+    public void setAtt(Integer x) {
         this.playerAtt = x;
     }
-    
-    public void setDef(Integer x)
-    {
+
+    public void setDef(Integer x) {
         this.playerDef = x;
     }
-    
-    public void setRange(Integer x)
-    {
+
+    public void setRange(Integer x) {
         this.playerRange = x;
     }
-    
-    
+
 }
