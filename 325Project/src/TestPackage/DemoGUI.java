@@ -19,11 +19,12 @@ public class DemoGUI extends javax.swing.JFrame {
 
     }
     //Player Stat holders
-    Integer playerHP = 100;
-    Integer playerMax = 100;
-    Integer playerAtt = 25;
-    Integer playerDef = 25;
-    String playerClass = "Warrior";
+    Integer playerHP;
+    Integer playerMax;
+    Integer playerAtt;
+    Integer playerDef;
+    Integer playerRange;
+    String playerClass;
     Boolean playerStatus;
 
     //Enemy stat holders
@@ -105,7 +106,8 @@ public class DemoGUI extends javax.swing.JFrame {
 
         jLabel6.setText("Password:");
 
-        cboClassSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tank", "Healer", "Melee Damage", "Range Damage" }));
+        cboClassSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paladin (Tank)", "Priest (Healer)", "Hunter (Ranged)", "Warrior (Melee)" }));
+        cboClassSelect.setSelectedIndex(-1);
 
         btnBegin.setText("Begin");
         btnBegin.addActionListener(new java.awt.event.ActionListener() {
@@ -849,5 +851,58 @@ public class DemoGUI extends javax.swing.JFrame {
         } else {
             txtAction.append("Can not move. \n");
         }
+    }
+    
+    public void selectTank(String x){
+        
+        Tank temp = new Tank(x);
+        
+        playerClass = "Palidan";
+        
+        playerHP = temp.getMax();
+        playerMax = temp.getMax();
+        playerAtt = temp.getAtt();
+        playerDef = temp.getDef();
+        playerRange = temp.getRange();
+        
+    }
+    
+    public void selectHealer(String x){
+        
+        Healer temp = new Healer(x);
+        
+        playerClass = "Priest";
+        
+        playerHP = temp.getMax();
+        playerMax = temp.getMax();
+        playerAtt = temp.getAtt();
+        playerDef = temp.getDef();
+        playerRange = temp.getRange();
+    }
+    
+    public void selectRange(String x){
+        
+        Range temp = new Range(x);
+        
+        playerClass = "Hunter";
+        
+        playerHP = temp.getMax();
+        playerMax = temp.getMax();
+        playerAtt = temp.getAtt();
+        playerDef = temp.getDef();
+        playerRange = temp.getRange();
+    }
+    
+    public void selectMelee(String x){
+        
+        Melee temp = new Melee(x);
+        
+        playerClass = "Warrior";
+        
+        playerHP = temp.getMax();
+        playerMax = temp.getMax();
+        playerAtt = temp.getAtt();
+        playerDef = temp.getDef();
+        playerRange = temp.getRange();
     }
 }

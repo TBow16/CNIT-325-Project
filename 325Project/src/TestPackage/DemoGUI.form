@@ -96,12 +96,13 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Tank"/>
-                <StringItem index="1" value="Healer"/>
-                <StringItem index="2" value="Melee Damage"/>
-                <StringItem index="3" value="Range Damage"/>
+                <StringItem index="0" value="Paladin (Tank)"/>
+                <StringItem index="1" value="Priest (Healer)"/>
+                <StringItem index="2" value="Hunter (Ranged)"/>
+                <StringItem index="3" value="Warrior (Melee)"/>
               </StringArray>
             </Property>
+            <Property name="selectedIndex" type="int" value="-1"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
