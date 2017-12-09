@@ -16,7 +16,7 @@ public class DemoGUI extends javax.swing.JFrame {
      */
     public DemoGUI() {
         initComponents();
-        
+
     }
     //Player Stat holders
     Integer playerHP = 100;
@@ -24,8 +24,8 @@ public class DemoGUI extends javax.swing.JFrame {
     Integer playerAtt = 25;
     Integer playerDef = 25;
     String playerClass = "Warrior";
-    Boolean playerStatus; 
-    
+    Boolean playerStatus;
+
     //Enemy stat holders
     Integer enemyHP = 50;
     Integer enemyMax = 50;
@@ -44,6 +44,15 @@ public class DemoGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jRadioButton16 = new javax.swing.JRadioButton();
+        newChar = new javax.swing.JFrame();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtSetName = new javax.swing.JTextField();
+        txtSetPass = new javax.swing.JTextField();
+        cboClassSelect = new javax.swing.JComboBox<>();
+        btnBegin = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
         btnDefend = new javax.swing.JButton();
         btnMove = new javax.swing.JButton();
         btnAttack = new javax.swing.JButton();
@@ -86,6 +95,76 @@ public class DemoGUI extends javax.swing.JFrame {
         about = new javax.swing.JMenuItem();
 
         jRadioButton16.setText("jRadioButton16");
+
+        newChar.setMinimumSize(new java.awt.Dimension(400, 300));
+        newChar.setPreferredSize(new java.awt.Dimension(400, 300));
+
+        jLabel4.setText("Name:");
+
+        jLabel5.setText("Class:");
+
+        jLabel6.setText("Password:");
+
+        cboClassSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tank", "Healer", "Melee Damage", "Range Damage" }));
+
+        btnBegin.setText("Begin");
+        btnBegin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBeginActionPerformed(evt);
+            }
+        });
+
+        btnCancel.setText("Cancel");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout newCharLayout = new javax.swing.GroupLayout(newChar.getContentPane());
+        newChar.getContentPane().setLayout(newCharLayout);
+        newCharLayout.setHorizontalGroup(
+            newCharLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(newCharLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(newCharLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(newCharLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtSetName)
+                    .addComponent(txtSetPass)
+                    .addComponent(cboClassSelect, 0, 200, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(newCharLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(btnBegin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
+        );
+        newCharLayout.setVerticalGroup(
+            newCharLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(newCharLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(newCharLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtSetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(newCharLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(txtSetPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(newCharLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(cboClassSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addGroup(newCharLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBegin)
+                    .addComponent(btnCancel))
+                .addGap(71, 71, 71))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -337,6 +416,26 @@ public class DemoGUI extends javax.swing.JFrame {
 
     private void newGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameActionPerformed
         // TODO add your handling code here:
+
+        newChar.setVisible(true);
+    }//GEN-LAST:event_newGameActionPerformed
+
+    private void summon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon1ActionPerformed
+        // TODO add your handling code here:
+        pos15.setSelected(true);
+        txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
+        txtAction.append("An enemy Murloc has appeared.");
+    }//GEN-LAST:event_summon1ActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+
+        newChar.setVisible(false);
+        pos1.setSelected(false);
+    }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnBeginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBeginActionPerformed
+        // TODO add your handling code here:
         pos1.setSelected(true);
         pos2.setSelected(false);
         pos3.setSelected(false);
@@ -356,18 +455,12 @@ public class DemoGUI extends javax.swing.JFrame {
         txtSelf.setText("");
         txtEnemy.setText("");
         txtAction.setText("");
-        
-        txtAction.append("Welecome to Traning Simulator \n");
+
+        txtAction.append("Welecome to Traning Simulator \n" + playerClass);
         txtSelf.setText("Class: " + playerClass + "\nHP: " + playerHP + "/" + playerMax + "\nAttack Damage: " + playerAtt + "\nDefense: " + playerDef + "\n");
+        newChar.setVisible(false);
 
-    }//GEN-LAST:event_newGameActionPerformed
-
-    private void summon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon1ActionPerformed
-        // TODO add your handling code here:
-        pos15.setSelected(true);
-        txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
-        txtAction.append("An enemy Murloc has appeared.");
-    }//GEN-LAST:event_summon1ActionPerformed
+    }//GEN-LAST:event_btnBeginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -408,14 +501,20 @@ public class DemoGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem about;
     private javax.swing.JButton btnAttack;
+    private javax.swing.JButton btnBegin;
+    private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnDefend;
     private javax.swing.JButton btnMove;
     private javax.swing.JButton btnSpecial;
+    private javax.swing.JComboBox<String> cboClassSelect;
     private javax.swing.JMenuItem exit;
     private javax.swing.JMenuItem howTo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -425,6 +524,7 @@ public class DemoGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JMenuItem login;
+    private javax.swing.JFrame newChar;
     private javax.swing.JMenuItem newGame;
     private javax.swing.JRadioButton pos1;
     private javax.swing.JRadioButton pos10;
@@ -447,6 +547,8 @@ public class DemoGUI extends javax.swing.JFrame {
     private javax.swing.JTextArea txtAction;
     private javax.swing.JTextArea txtEnemy;
     private javax.swing.JTextArea txtSelf;
+    private javax.swing.JTextField txtSetName;
+    private javax.swing.JTextField txtSetPass;
     // End of variables declaration//GEN-END:variables
 
     private void playerMovement() {
@@ -658,9 +760,8 @@ public class DemoGUI extends javax.swing.JFrame {
         }
 
     }
-    
-    private void playerAttack()
-    {
+
+    private void playerAttack() {
         if (pos1.isSelected()) {
             if (pos2.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
