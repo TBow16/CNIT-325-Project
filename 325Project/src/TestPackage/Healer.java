@@ -13,9 +13,9 @@ public class Healer extends Player {
 
     Healer(String x) {
         playerName = x;
-        playerMax = 150;
+        playerMax = 75;
         playerAtt = 15;
-        playerDef = 25;
-        playerRange = 1;
+        playerDef = 15;
+        playerRange = 2;
     }
 }

@@ -14,9 +14,9 @@ public class Range extends Damage {
     Range(String x) {
         playerName = x;
         playerMax = 150;
-        playerAtt = 15;
-        playerDef = 25;
-        playerRange = 1;
+        playerAtt = 25;
+        playerDef = 15;
+        playerRange = 2;
     }
 
 }

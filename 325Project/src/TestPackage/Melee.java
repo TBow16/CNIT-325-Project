@@ -14,8 +14,8 @@ public class Melee extends Damage {
     Melee(String x) {
         playerName = x;
         playerMax = 150;
-        playerAtt = 15;
-        playerDef = 25;
+        playerAtt = 25;
+        playerDef = 20;
         playerRange = 1;
     }
 
