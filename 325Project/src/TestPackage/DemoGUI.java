@@ -5,6 +5,8 @@
  */
 package TestPackage;
 
+import com.marsG.simplerandomorglib.RandomIntegerClient;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -36,6 +38,8 @@ public class DemoGUI extends javax.swing.JFrame {
     Integer enemyDef;
     String enemyClass;
     Boolean enemyStatus;
+    
+    Integer[] x = new Integer[100];
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -95,9 +99,6 @@ public class DemoGUI extends javax.swing.JFrame {
         summon2 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        howTo = new javax.swing.JMenuItem();
-        about = new javax.swing.JMenuItem();
 
         jRadioButton16.setText("jRadioButton16");
 
@@ -230,7 +231,7 @@ public class DemoGUI extends javax.swing.JFrame {
 
         jLabel3.setText("Previous Actions");
 
-        jMenu1.setText("File");
+        jMenu1.setText("Options");
 
         newGame.setText("New Game");
         newGame.addActionListener(new java.awt.event.ActionListener() {
@@ -247,6 +248,11 @@ public class DemoGUI extends javax.swing.JFrame {
         jMenu1.add(save);
 
         exit.setText("Exit");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
         jMenu1.add(exit);
 
         jMenuBar1.add(jMenu1);
@@ -286,16 +292,6 @@ public class DemoGUI extends javax.swing.JFrame {
         jMenu3.add(jMenuItem2);
 
         jMenuBar1.add(jMenu3);
-
-        jMenu2.setText("Info");
-
-        howTo.setText("How to Play");
-        jMenu2.add(howTo);
-
-        about.setText("About");
-        jMenu2.add(about);
-
-        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -569,6 +565,11 @@ public class DemoGUI extends javax.swing.JFrame {
         txtAction.append("An enemy " + enemyClass + "has appeared. \n");
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_exitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -606,7 +607,6 @@ public class DemoGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem about;
     private javax.swing.JButton btnAttack;
     private javax.swing.JButton btnBegin;
     private javax.swing.JButton btnCancel;
@@ -615,7 +615,6 @@ public class DemoGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnSpecial;
     private javax.swing.JComboBox<String> cboClassSelect;
     private javax.swing.JMenuItem exit;
-    private javax.swing.JMenuItem howTo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -623,7 +622,6 @@ public class DemoGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
@@ -1254,4 +1252,25 @@ public class DemoGUI extends javax.swing.JFrame {
     private void enemyUpdate() {
         txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
     }
+
+    private void randomNumberList() {
+
+        
+
+        try {
+            RandomIntegerClient cl = new RandomIntegerClient("trevdog16@gmail.com");
+            //get a list of 20 random integers(base 10) in the  [1,100] interval.
+            List<String> myRandomIntegers = cl.getRandomIntDecimal(1, 100, 100);
+            
+            for(int y = 0; y < 20; y++)
+            {
+                x[y] = Integer.parseInt(myRandomIntegers.get(y));
+            }
+
+        } catch (IOException e) {
+
+        }
+
+    }
+
 }
