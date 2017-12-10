@@ -38,8 +38,6 @@ public class DemoGUI extends javax.swing.JFrame {
     Integer enemyDef;
     String enemyClass;
     Boolean enemyStatus;
-    
-    Integer[] x = new Integer[100];
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -411,6 +409,7 @@ public class DemoGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //trigger player defense
     private void btnDefendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDefendActionPerformed
         // TODO add your handling code here:
         //will either reduce or negate damage dependant on class
@@ -419,6 +418,7 @@ public class DemoGUI extends javax.swing.JFrame {
         playerStatus = false;
     }//GEN-LAST:event_btnDefendActionPerformed
 
+    //trigger player movement
     private void btnMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoveActionPerformed
         // TODO add your handling code here:
         //Player movement
@@ -427,6 +427,7 @@ public class DemoGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnMoveActionPerformed
 
+    //trigger player attack
     private void btnAttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttackActionPerformed
         // TODO add your handling code here:
         if (playerRange == 1) {
@@ -443,12 +444,14 @@ public class DemoGUI extends javax.swing.JFrame {
         //Class based special move
     }//GEN-LAST:event_btnSpecialActionPerformed
 
+    //starts new game
     private void newGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameActionPerformed
         // TODO add your handling code here:
 
         newChar.setVisible(true);
     }//GEN-LAST:event_newGameActionPerformed
 
+    //summon murloc
     private void summon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon1ActionPerformed
         // TODO add your handling code here:
         pos15.setSelected(true);
@@ -465,6 +468,7 @@ public class DemoGUI extends javax.swing.JFrame {
         txtAction.append("An enemy " + enemyClass + "has appeared. \n");
     }//GEN-LAST:event_summon1ActionPerformed
 
+    //New Player creation cancelation
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
 
@@ -472,6 +476,7 @@ public class DemoGUI extends javax.swing.JFrame {
         pos1.setSelected(false);
     }//GEN-LAST:event_btnCancelActionPerformed
 
+    //New Player creation start
     private void btnBeginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBeginActionPerformed
         // TODO add your handling code here:
         pos1.setSelected(true);
@@ -517,6 +522,7 @@ public class DemoGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnBeginActionPerformed
 
+    //Summon Goblen
     private void summon2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon2ActionPerformed
         // TODO add your handling code here:
         pos15.setSelected(true);
@@ -533,6 +539,7 @@ public class DemoGUI extends javax.swing.JFrame {
         txtAction.append("An enemy " + enemyClass + "has appeared. \n");
     }//GEN-LAST:event_summon2ActionPerformed
 
+    //Summon Troll
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         pos15.setSelected(true);
@@ -549,6 +556,7 @@ public class DemoGUI extends javax.swing.JFrame {
         txtAction.append("An enemy " + enemyClass + "has appeared. \n");
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    //Summon Boss
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
         pos15.setSelected(true);
@@ -565,6 +573,7 @@ public class DemoGUI extends javax.swing.JFrame {
         txtAction.append("An enemy " + enemyClass + "has appeared. \n");
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    //exit button
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         // TODO add your handling code here:
         System.exit(0);
@@ -658,6 +667,7 @@ public class DemoGUI extends javax.swing.JFrame {
     private javax.swing.JTextField txtSetPass;
     // End of variables declaration//GEN-END:variables
 
+    //player movment 
     private void playerMovement() {
         if (pos1.isSelected()) {
             if (!pos2.isSelected()) {
@@ -756,6 +766,7 @@ public class DemoGUI extends javax.swing.JFrame {
 
     }
 
+    //enemy "ai" 
     private void enemyReaction() {
         if (pos15.isSelected()) {
             if (!pos14.isSelected()) {
@@ -867,6 +878,7 @@ public class DemoGUI extends javax.swing.JFrame {
 
     }
 
+    //enemy attack
     private void enemyAttack() {
 
         Random x = new Random();
@@ -885,6 +897,7 @@ public class DemoGUI extends javax.swing.JFrame {
 
     }
 
+    //melee character attack
     private void playerMeleeAttack() {
 
         Random x = new Random();
@@ -1012,6 +1025,7 @@ public class DemoGUI extends javax.swing.JFrame {
         }
     }
 
+    //ranged player attack 
     private void playerRangeAttack() {
 
         Random x = new Random();
@@ -1191,6 +1205,7 @@ public class DemoGUI extends javax.swing.JFrame {
         }
     }
 
+    //creates tank
     private void selectTank(String x) {
 
         Tank temp = new Tank(x);
@@ -1205,6 +1220,7 @@ public class DemoGUI extends javax.swing.JFrame {
 
     }
 
+    //creates healer char
     private void selectHealer(String x) {
 
         Healer temp = new Healer(x);
@@ -1218,6 +1234,7 @@ public class DemoGUI extends javax.swing.JFrame {
         playerRange = temp.getRange();
     }
 
+    //creates reage charactor
     private void selectRange(String x) {
 
         Range temp = new Range(x);
@@ -1231,6 +1248,7 @@ public class DemoGUI extends javax.swing.JFrame {
         playerRange = temp.getRange();
     }
 
+    //creating melee character
     private void selectMelee(String x) {
 
         Melee temp = new Melee(x);
@@ -1244,32 +1262,34 @@ public class DemoGUI extends javax.swing.JFrame {
         playerRange = temp.getRange();
     }
 
+    //updates player info
     private void playerUpdate() {
         txtSelf.setText("Class: " + playerClass + "\nHP: " + playerHP + "/" + playerMax + "\nAttack Damage: " + playerAtt + "\nDefense: " + playerDef + "\nRange: " + playerRange);
 
     }
-
+    
+    //updates enemy info
     private void enemyUpdate() {
         txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
     }
 
-    private void randomNumberList() {
+    //generates random number
+    private Integer randomNumber() {
 
-        
+        int x = 51;
 
         try {
             RandomIntegerClient cl = new RandomIntegerClient("trevdog16@gmail.com");
             //get a list of 20 random integers(base 10) in the  [1,100] interval.
-            List<String> myRandomIntegers = cl.getRandomIntDecimal(1, 100, 100);
-            
-            for(int y = 0; y < 20; y++)
-            {
-                x[y] = Integer.parseInt(myRandomIntegers.get(y));
-            }
+            List<String> myRandomIntegers = cl.getRandomIntDecimal(1, 100, 1);
+
+            x = Integer.parseInt(myRandomIntegers.get(0));
 
         } catch (IOException e) {
 
         }
+
+        return x;
 
     }
 

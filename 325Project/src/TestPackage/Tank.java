@@ -9,6 +9,8 @@ package TestPackage;
  *
  * @author trevor
  */
+
+//class construtor assigning varible values
 public class Tank extends Player implements Special {
 
     Tank(String x) {

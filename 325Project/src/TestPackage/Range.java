@@ -9,6 +9,8 @@ package TestPackage;
  *
  * @author trevor
  */
+
+//class construtor assigning varible values
 public class Range extends Damage implements Special {
 
     Range(String x) {

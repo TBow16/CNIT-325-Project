@@ -9,6 +9,8 @@ package TestPackage;
  *
  * @author trevor
  */
+
+//base enemy class
 public class Enemy {
     String enemyName;
     Integer enemyMax;

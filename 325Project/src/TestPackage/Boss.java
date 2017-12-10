@@ -11,6 +11,7 @@ package TestPackage;
  */
 public class Boss extends Enemy {
     
+    //class construtor assigning varible values
     Boss() {
         enemyMax = 500;
         enemyAtt = 25;

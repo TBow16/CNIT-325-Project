@@ -9,6 +9,8 @@ package TestPackage;
  *
  * @author trevor
  */
+
+//Base player class
 public class Player {
 
     String playerName;

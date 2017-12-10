@@ -9,6 +9,8 @@ package TestPackage;
  *
  * @author trevor
  */
+
+//interface for player classes.
 public interface Special {
 
     void Extra();

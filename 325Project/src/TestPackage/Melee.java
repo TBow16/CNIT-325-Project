@@ -9,6 +9,8 @@ package TestPackage;
  *
  * @author trevor
  */
+
+//class construtor assigning varible values
 public class Melee extends Damage implements Special {
 
     Melee(String x) {

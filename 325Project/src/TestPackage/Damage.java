@@ -9,6 +9,12 @@ package TestPackage;
  *
  * @author trevor
  */
+
+//further breaks down damage class
 public class Damage extends Player {
+    
+    Damage(){
+        playerAtt = 25;
+    }
 
 }

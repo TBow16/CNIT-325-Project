@@ -9,6 +9,8 @@ package TestPackage;
  *
  * @author trevor
  */
+
+//class construtor assigning varible values
 public class Healer extends Player implements Special {
 
     Healer(String x) {
