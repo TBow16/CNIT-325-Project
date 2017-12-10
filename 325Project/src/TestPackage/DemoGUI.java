@@ -25,7 +25,7 @@ public class DemoGUI extends javax.swing.JFrame {
     Integer playerDef;
     Integer playerRange;
     String playerClass;
-    Boolean playerStatus;
+    Boolean playerStatus = false;
 
     //Enemy stat holders
     Integer enemyHP = 50;
@@ -394,7 +394,9 @@ public class DemoGUI extends javax.swing.JFrame {
     private void btnDefendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDefendActionPerformed
         // TODO add your handling code here:
         //will either reduce or negate damage dependant on class
+        playerStatus = true;
         enemyReaction();
+        playerStatus = false;
     }//GEN-LAST:event_btnDefendActionPerformed
 
     private void btnMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoveActionPerformed
