@@ -407,7 +407,12 @@ public class DemoGUI extends javax.swing.JFrame {
 
     private void btnAttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttackActionPerformed
         // TODO add your handling code here:
-        playerAttack();
+        if (playerRange == 1) {
+            playerMeleeAttack();
+        }
+        if (playerRange == 2) {
+            playerRangeAttack();
+        }
         enemyReaction();
     }//GEN-LAST:event_btnAttackActionPerformed
 
@@ -458,8 +463,8 @@ public class DemoGUI extends javax.swing.JFrame {
         txtEnemy.setText("");
         txtAction.setText("");
 
-        txtAction.append("Welecome to Traning Simulator \n" + playerClass);
-        txtSelf.setText("Class: " + playerClass + "\nHP: " + playerHP + "/" + playerMax + "\nAttack Damage: " + playerAtt + "\nDefense: " + playerDef + "\n");
+        txtAction.append("Welecome to Traning Simulator " + playerClass + "\n");
+        txtSelf.setText("Class: " + playerClass + "\nHP: " + playerHP + "/" + playerMax + "\nAttack Damage: " + playerAtt + "\nDefense: " + playerDef + "\nRange: " + playerRange);
         newChar.setVisible(false);
 
     }//GEN-LAST:event_btnBeginActionPerformed
@@ -763,7 +768,7 @@ public class DemoGUI extends javax.swing.JFrame {
 
     }
 
-    private void playerAttack() {
+    private void playerMeleeAttack() {
         if (pos1.isSelected()) {
             if (pos2.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
@@ -849,56 +854,172 @@ public class DemoGUI extends javax.swing.JFrame {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else {
-            txtAction.append("Can not move. \n");
+
         }
     }
-    
-    public void selectTank(String x){
-        
+
+    private void playerRangeAttack() {
+        if (pos1.isSelected()) {
+            if (pos2.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos3.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos2.isSelected()) {
+            if (pos3.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos4.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos3.isSelected()) {
+            if (pos4.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos5.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos4.isSelected()) {
+            if (pos5.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos6.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos5.isSelected()) {
+            if (pos6.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos7.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos6.isSelected()) {
+            if (pos7.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos8.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos7.isSelected()) {
+            if (pos8.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos9.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos8.isSelected()) {
+            if (pos9.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos10.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos9.isSelected()) {
+            if (pos10.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos11.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos10.isSelected()) {
+            if (pos11.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos12.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos11.isSelected()) {
+            if (pos12.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos13.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos12.isSelected()) {
+            if (pos13.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos14.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos13.isSelected()) {
+            if (pos14.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else if (pos15.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else if (pos14.isSelected()) {
+            if (pos15.isSelected()) {
+                txtAction.append("You attacked the enemy. \n");
+            } else {
+                txtAction.append("You fire an arrow. \n    ...It did nothing \n");
+            }
+        } else {
+
+        }
+    }
+
+    private void selectTank(String x) {
+
         Tank temp = new Tank(x);
-        
+
         playerClass = "Palidan";
-        
+
         playerHP = temp.getMax();
         playerMax = temp.getMax();
         playerAtt = temp.getAtt();
         playerDef = temp.getDef();
         playerRange = temp.getRange();
-        
+
     }
-    
-    public void selectHealer(String x){
-        
+
+    private void selectHealer(String x) {
+
         Healer temp = new Healer(x);
-        
+
         playerClass = "Priest";
-        
+
         playerHP = temp.getMax();
         playerMax = temp.getMax();
         playerAtt = temp.getAtt();
         playerDef = temp.getDef();
         playerRange = temp.getRange();
     }
-    
-    public void selectRange(String x){
-        
+
+    private void selectRange(String x) {
+
         Range temp = new Range(x);
-        
+
         playerClass = "Hunter";
-        
+
         playerHP = temp.getMax();
         playerMax = temp.getMax();
         playerAtt = temp.getAtt();
         playerDef = temp.getDef();
         playerRange = temp.getRange();
     }
-    
-    public void selectMelee(String x){
-        
+
+    private void selectMelee(String x) {
+
         Melee temp = new Melee(x);
-        
+
         playerClass = "Warrior";
-        
+
         playerHP = temp.getMax();
         playerMax = temp.getMax();
         playerAtt = temp.getAtt();
