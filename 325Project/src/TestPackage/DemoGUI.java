@@ -5,6 +5,8 @@
  */
 package TestPackage;
 
+import java.util.*;
+
 /**
  *
  * @author trevor
@@ -28,11 +30,11 @@ public class DemoGUI extends javax.swing.JFrame {
     Boolean playerStatus = false;
 
     //Enemy stat holders
-    Integer enemyHP = 50;
-    Integer enemyMax = 50;
-    Integer enemyAtt = 15;
-    Integer enemyDef = 10;
-    String enemyClass = "Murloc";
+    Integer enemyHP;
+    Integer enemyMax;
+    Integer enemyAtt;
+    Integer enemyDef;
+    String enemyClass;
     Boolean enemyStatus;
 
     /**
@@ -91,6 +93,8 @@ public class DemoGUI extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         summon1 = new javax.swing.JMenuItem();
         summon2 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         howTo = new javax.swing.JMenuItem();
         about = new javax.swing.JMenuItem();
@@ -98,7 +102,6 @@ public class DemoGUI extends javax.swing.JFrame {
         jRadioButton16.setText("jRadioButton16");
 
         newChar.setMinimumSize(new java.awt.Dimension(400, 300));
-        newChar.setPreferredSize(new java.awt.Dimension(400, 300));
 
         jLabel4.setText("Name:");
 
@@ -250,7 +253,7 @@ public class DemoGUI extends javax.swing.JFrame {
 
         jMenu3.setText("Summon");
 
-        summon1.setText("Enemy 1");
+        summon1.setText("Murloc");
         summon1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 summon1ActionPerformed(evt);
@@ -258,8 +261,29 @@ public class DemoGUI extends javax.swing.JFrame {
         });
         jMenu3.add(summon1);
 
-        summon2.setText("Enemy 2");
+        summon2.setText("Goblin");
+        summon2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                summon2ActionPerformed(evt);
+            }
+        });
         jMenu3.add(summon2);
+
+        jMenuItem1.setText("Troll");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
+        jMenuItem2.setText("Boss");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem2);
 
         jMenuBar1.add(jMenu3);
 
@@ -432,8 +456,17 @@ public class DemoGUI extends javax.swing.JFrame {
     private void summon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon1ActionPerformed
         // TODO add your handling code here:
         pos15.setSelected(true);
+
+        Murloc temp = new Murloc();
+
+        enemyClass = temp.getName();
+        enemyHP = temp.getMax();
+        enemyMax = temp.getMax();
+        enemyAtt = temp.getAtt();
+        enemyDef = temp.getDef();
+
         txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
-        txtAction.append("An enemy Murloc has appeared.");
+        txtAction.append("An enemy " + enemyClass + "has appeared. \n");
     }//GEN-LAST:event_summon1ActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
@@ -464,7 +497,7 @@ public class DemoGUI extends javax.swing.JFrame {
         txtSelf.setText("");
         txtEnemy.setText("");
         txtAction.setText("");
-        
+
         switch (cboClassSelect.getSelectedIndex()) {
             case 0:
                 selectTank(txtSetName.getText());
@@ -487,6 +520,54 @@ public class DemoGUI extends javax.swing.JFrame {
         newChar.setVisible(false);
 
     }//GEN-LAST:event_btnBeginActionPerformed
+
+    private void summon2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_summon2ActionPerformed
+        // TODO add your handling code here:
+        pos15.setSelected(true);
+
+        Goblin temp = new Goblin();
+
+        enemyClass = temp.getName();
+        enemyHP = temp.getMax();
+        enemyMax = temp.getMax();
+        enemyAtt = temp.getAtt();
+        enemyDef = temp.getDef();
+
+        txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
+        txtAction.append("An enemy " + enemyClass + "has appeared. \n");
+    }//GEN-LAST:event_summon2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        pos15.setSelected(true);
+
+        Troll temp = new Troll();
+
+        enemyClass = temp.getName();
+        enemyHP = temp.getMax();
+        enemyMax = temp.getMax();
+        enemyAtt = temp.getAtt();
+        enemyDef = temp.getDef();
+
+        txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
+        txtAction.append("An enemy " + enemyClass + "has appeared. \n");
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        pos15.setSelected(true);
+
+        Boss temp = new Boss();
+
+        enemyClass = temp.getName();
+        enemyHP = temp.getMax();
+        enemyMax = temp.getMax();
+        enemyAtt = temp.getAtt();
+        enemyDef = temp.getDef();
+
+        txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
+        txtAction.append("An enemy " + enemyClass + "has appeared. \n");
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -545,6 +626,8 @@ public class DemoGUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JRadioButton jRadioButton16;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -682,7 +765,6 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos14.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
 
             }
         } else if (pos14.isSelected()) {
@@ -691,7 +773,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos13.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos13.isSelected()) {
             if (!pos12.isSelected()) {
@@ -699,7 +781,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos12.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos12.isSelected()) {
             if (!pos11.isSelected()) {
@@ -707,7 +789,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos11.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos11.isSelected()) {
             if (!pos10.isSelected()) {
@@ -715,7 +797,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos10.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos10.isSelected()) {
             if (!pos9.isSelected()) {
@@ -723,7 +805,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos9.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos9.isSelected()) {
             if (!pos8.isSelected()) {
@@ -731,7 +813,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos8.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos8.isSelected()) {
             if (!pos7.isSelected()) {
@@ -739,7 +821,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos7.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos7.isSelected()) {
             if (!pos6.isSelected()) {
@@ -747,7 +829,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos6.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos6.isSelected()) {
             if (!pos5.isSelected()) {
@@ -755,7 +837,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos5.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos5.isSelected()) {
             if (!pos4.isSelected()) {
@@ -763,7 +845,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos4.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos4.isSelected()) {
             if (!pos3.isSelected()) {
@@ -771,7 +853,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos3.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else if (pos3.isSelected()) {
             if (!pos2.isSelected()) {
@@ -779,7 +861,7 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos2.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-                txtAction.append("You have been attacked. \n");
+                enemyAttack();
             }
         } else {
 
@@ -787,88 +869,143 @@ public class DemoGUI extends javax.swing.JFrame {
 
     }
 
+    private void enemyAttack() {
+
+        Random x = new Random();
+
+        int hit = x.nextInt(100) + 1;
+
+        if (hit >= 50) {
+            txtAction.append("You see the enemy fumble around. \n");
+        } else if (enemyAtt - playerDef <= 0) {
+            txtAction.append("This enemys attack seems week. \nIt does no damage. \n");
+        } else {
+            txtAction.append("You have been attacked. \n");
+            playerHP = playerHP - (enemyAtt - playerDef);
+            playerUpdate();
+        }
+
+    }
+
     private void playerMeleeAttack() {
-        if (pos1.isSelected()) {
+
+        Random x = new Random();
+
+        int hit = x.nextInt(100) + 1;
+
+        if (hit >= 50) {
+            txtAction.append("Your attack missed. \n");
+        } else if (playerAtt - enemyDef <= 0) {
+            txtAction.append("The enemy let you attack him. \nIt does no damage. \n");
+        } else if (pos1.isSelected()) {
             if (pos2.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos2.isSelected()) {
             if (pos3.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos3.isSelected()) {
             if (pos4.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos4.isSelected()) {
             if (pos5.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos5.isSelected()) {
             if (pos6.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos6.isSelected()) {
             if (pos7.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos7.isSelected()) {
             if (pos8.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos8.isSelected()) {
             if (pos9.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos9.isSelected()) {
             if (pos10.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos10.isSelected()) {
             if (pos11.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos11.isSelected()) {
             if (pos12.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos12.isSelected()) {
             if (pos12.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos13.isSelected()) {
             if (pos14.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
         } else if (pos14.isSelected()) {
             if (pos15.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You attemted to attack the air. \n    ...It did nothing \n");
             }
@@ -878,113 +1015,176 @@ public class DemoGUI extends javax.swing.JFrame {
     }
 
     private void playerRangeAttack() {
-        if (pos1.isSelected()) {
+
+        Random x = new Random();
+
+        int hit = x.nextInt(100) + 1;
+
+        if (hit >= 50) {
+            txtAction.append("Your attack missed. \n");
+        } else if (playerAtt - enemyDef <= 0) {
+            txtAction.append("The enemy let you attack him. \nIt does no damage. \n");
+        } else if (pos1.isSelected()) {
             if (pos2.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos3.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos2.isSelected()) {
             if (pos3.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos4.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos3.isSelected()) {
             if (pos4.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos5.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos4.isSelected()) {
             if (pos5.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos6.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos5.isSelected()) {
             if (pos6.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos7.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos6.isSelected()) {
             if (pos7.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos8.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos7.isSelected()) {
             if (pos8.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos9.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos8.isSelected()) {
             if (pos9.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos10.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos9.isSelected()) {
             if (pos10.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos11.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos10.isSelected()) {
             if (pos11.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos12.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos11.isSelected()) {
             if (pos12.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos13.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos12.isSelected()) {
             if (pos13.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos14.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos13.isSelected()) {
             if (pos14.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else if (pos15.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
         } else if (pos14.isSelected()) {
             if (pos15.isSelected()) {
                 txtAction.append("You attacked the enemy. \n");
+                enemyHP = enemyHP - (playerAtt - enemyDef);
+                enemyUpdate();
             } else {
                 txtAction.append("You fire an arrow. \n    ...It did nothing \n");
             }
@@ -1044,5 +1244,14 @@ public class DemoGUI extends javax.swing.JFrame {
         playerAtt = temp.getAtt();
         playerDef = temp.getDef();
         playerRange = temp.getRange();
+    }
+
+    private void playerUpdate() {
+        txtSelf.setText("Class: " + playerClass + "\nHP: " + playerHP + "/" + playerMax + "\nAttack Damage: " + playerAtt + "\nDefense: " + playerDef + "\nRange: " + playerRange);
+
+    }
+
+    private void enemyUpdate() {
+        txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
     }
 }
