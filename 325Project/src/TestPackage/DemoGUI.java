@@ -464,6 +464,23 @@ public class DemoGUI extends javax.swing.JFrame {
         txtSelf.setText("");
         txtEnemy.setText("");
         txtAction.setText("");
+        
+        switch (cboClassSelect.getSelectedIndex()) {
+            case 0:
+                selectTank(txtSetName.getText());
+                break;
+            case 1:
+                selectHealer(txtSetName.getText());
+                break;
+            case 2:
+                selectRange(txtSetName.getText());
+                break;
+            case 3:
+                selectMelee(txtSetName.getText());
+                break;
+            default:
+                break;
+        }
 
         txtAction.append("Welecome to Traning Simulator " + playerClass + "\n");
         txtSelf.setText("Class: " + playerClass + "\nHP: " + playerHP + "/" + playerMax + "\nAttack Damage: " + playerAtt + "\nDefense: " + playerDef + "\nRange: " + playerRange);
