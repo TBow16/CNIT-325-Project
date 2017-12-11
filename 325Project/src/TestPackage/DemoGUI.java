@@ -774,7 +774,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos14.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
-
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
+                enemyAttack();
+                }
             }
         } else if (pos14.isSelected()) {
             if (!pos13.isSelected()) {
@@ -782,7 +786,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos13.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos13.isSelected()) {
             if (!pos12.isSelected()) {
@@ -790,7 +798,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos12.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos12.isSelected()) {
             if (!pos11.isSelected()) {
@@ -798,7 +810,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos11.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos11.isSelected()) {
             if (!pos10.isSelected()) {
@@ -806,7 +822,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos10.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos10.isSelected()) {
             if (!pos9.isSelected()) {
@@ -814,7 +834,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos9.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos9.isSelected()) {
             if (!pos8.isSelected()) {
@@ -822,7 +846,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos8.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos8.isSelected()) {
             if (!pos7.isSelected()) {
@@ -830,7 +858,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos7.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos7.isSelected()) {
             if (!pos6.isSelected()) {
@@ -838,7 +870,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos6.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos6.isSelected()) {
             if (!pos5.isSelected()) {
@@ -846,7 +882,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos5.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos5.isSelected()) {
             if (!pos4.isSelected()) {
@@ -854,7 +894,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos4.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos4.isSelected()) {
             if (!pos3.isSelected()) {
@@ -862,7 +906,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos3.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else if (pos3.isSelected()) {
             if (!pos2.isSelected()) {
@@ -870,7 +918,11 @@ public class DemoGUI extends javax.swing.JFrame {
                 pos2.setSelected(true);
                 txtAction.append("You see the enemy move forward. \n");
             } else {
+                if (playerStatus) {
+                txtAction.append("The enemy attempts to attack. \n   But you were prepared. \n");
+                } else {
                 enemyAttack();
+                }
             }
         } else {
 
@@ -1267,7 +1319,7 @@ public class DemoGUI extends javax.swing.JFrame {
         txtSelf.setText("Class: " + playerClass + "\nHP: " + playerHP + "/" + playerMax + "\nAttack Damage: " + playerAtt + "\nDefense: " + playerDef + "\nRange: " + playerRange);
 
     }
-    
+
     //updates enemy info
     private void enemyUpdate() {
         txtEnemy.setText(enemyClass + "\nHP: " + enemyHP + "/" + enemyMax + "\nAttack Damage:" + enemyAtt + "\nDefense: " + enemyDef + "\n");
