@@ -439,9 +439,12 @@ public class DemoGUI extends javax.swing.JFrame {
         enemyReaction();
     }//GEN-LAST:event_btnAttackActionPerformed
 
+    //triggers player Special Enemys dont get reaction
     private void btnSpecialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSpecialActionPerformed
         // TODO add your handling code here:
-        //Class based special move
+        playerSpecial();
+        playerUpdate();
+        enemyUpdate();
     }//GEN-LAST:event_btnSpecialActionPerformed
 
     //starts new game
@@ -947,6 +950,22 @@ public class DemoGUI extends javax.swing.JFrame {
             playerUpdate();
         }
 
+    }
+    
+    //special attacks
+    private void playerSpecial() {
+        switch (playerClass) {
+            case "Palidan":
+                playerDef = playerDef + 5;
+            case "Priest":
+                playerHP = playerMax;
+            case "Hunter":
+                enemyHP = enemyHP - 5;
+            case "Warrior":
+                playerAtt = playerAtt + 5;
+            default:
+                break;
+        }
     }
 
     //melee character attack
