@@ -7,7 +7,7 @@ package TestPackage;
 
 /**
  *
- * @author trevor
+ * 
  */
 
 //base enemy class

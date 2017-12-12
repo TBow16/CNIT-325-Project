@@ -7,7 +7,7 @@ package TestPackage;
 
 /**
  *
- * @author trevor
+ * 
  */
 
 //Base player class

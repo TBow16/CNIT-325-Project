@@ -7,7 +7,7 @@ package TestPackage;
 
 /**
  *
- * @author trevor
+ * 
  */
 
 //class construtor assigning varible values

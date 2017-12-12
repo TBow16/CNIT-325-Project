@@ -7,7 +7,7 @@ package TestPackage;
 
 /**
  *
- * @author trevor
+ * 
  */
 
 //interface for player classes.

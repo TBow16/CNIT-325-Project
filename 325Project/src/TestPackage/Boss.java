@@ -7,7 +7,7 @@ package TestPackage;
 
 /**
  *
- * @author trevor
+ * 
  */
 public class Boss extends Enemy {
     

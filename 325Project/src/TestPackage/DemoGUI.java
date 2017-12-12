@@ -11,7 +11,7 @@ import java.util.*;
 
 /**
  *
- * @author trevor
+ * 
  */
 public class DemoGUI extends javax.swing.JFrame {
 
